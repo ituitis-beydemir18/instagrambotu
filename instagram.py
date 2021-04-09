@@ -20,11 +20,11 @@ tm.sleep(3)
 driver.find_element_by_xpath("//*[@id='react-root']/section/nav/div[2]/div/div/div[2]/div[3]/div/div[2]/div/div[1]/a/div").click()
 tm.sleep(3)
 
-"""tm.sleep(5)
-driver.execute_script("window.scrollTo(0, 2000)")                                                                                                     #bu kısım yüklenmemiş resme basılamayacağı için onun yüklenmesini sağlıyordu
 tm.sleep(5)
+driver.execute_script("window.scrollTo(0, 2000)")                                                                                                     #bu kısım yüklenmemiş resme basılamayacağı için onun yüklenmesini sağlıyordu
+"""tm.sleep(5)
 driver.execute_script("window.scrollTo(0, 2000)")"""
-driver.find_element_by_xpath("//*[@id='react-root']/section/main/div/div[3]/article/div[1]/div/div[2]/div[2]/a/div").click()
+driver.find_element_by_xpath("//*[@id='react-root']/section/main/div/div[3]/article/div[1]/div/div[1]/div[2]/a").click()
 
 
 tm.sleep(5)
@@ -33,7 +33,7 @@ tm.sleep(5)
 
 liste = []
 süreler = [4,5,7,8,4,5,4,6,4,5,5,6,4,5,5,4,4,8,8,5,4,7,5]
-for a in range(3,24):
+for a in range(1,24):
     liste.append(driver.find_element_by_xpath("/html/body/div[5]/div[2]/div/article/div[3]/div[1]/ul/ul[{}]/div/li/div/div[1]/div[2]/span".format(a)).text)
 
 
@@ -51,7 +51,7 @@ for i in range(0,20):
     if t%2 == 0:
         driver.find_element_by_xpath("/html/body/div[5]/div[3]/button").click()
         tm.sleep(2)
-        driver.find_element_by_xpath("//*[@id='react-root']/section/main/div/div[3]/article/div[1]/div/div[2]/div[2]/a/div").click()
+        driver.find_element_by_xpath("//*[@id='react-root']/section/main/div/div[3]/article/div[1]/div/div[1]/div[2]/a").click()
         tm.sleep(3)
 
 
